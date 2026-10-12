@@ -1,0 +1,469 @@
+{
+ "labels": [
+  [
+   "data-mapping",
+   "D73A4A",
+   "Vendor/customer/GL mapping for migration"
+  ],
+  [
+   "cutover-runbook",
+   "0E8A16",
+   "Runbook steps and rehearsals"
+  ],
+  [
+   "integration",
+   "1D76DB",
+   "Interfaces to CRM, payroll, banking"
+  ],
+  [
+   "reporting",
+   "5319E7",
+   "Finance and KPI reporting after cutover"
+  ],
+  [
+   "performance",
+   "FBCA04",
+   "Batch windows and load"
+  ],
+  [
+   "security",
+   "B60205",
+   "Access, secrets, audit"
+  ],
+  [
+   "dry-run-finding",
+   "C2E0C6",
+   "Found during a dry run"
+  ]
+ ],
+ "milestones": [
+  [
+   "Dry-run 1",
+   "2026-09-19"
+  ],
+  [
+   "Dry-run 2",
+   "2026-10-10"
+  ],
+  [
+   "Dry-run 3",
+   "2026-10-31"
+  ],
+  [
+   "Cutover",
+   "2026-12-19"
+  ]
+ ],
+ "issues": [
+  {
+   "title": "Define vendor master mapping rules (legacy \u2192 target)",
+   "labels": [
+    "data-mapping"
+   ],
+   "milestone": "Dry-run 1",
+   "created": "2026-09-01",
+   "closed": "2026-09-05",
+   "body": "Field-level mapping for vendor master. Owner codes differ between regions."
+  },
+  {
+   "title": "Export legacy GL account structure",
+   "labels": [
+    "data-mapping"
+   ],
+   "milestone": "Dry-run 1",
+   "created": "2026-09-01",
+   "closed": "2026-09-03",
+   "body": ""
+  },
+  {
+   "title": "Mapping script v1: vendors",
+   "labels": [
+    "data-mapping"
+   ],
+   "milestone": "Dry-run 1",
+   "created": "2026-09-03",
+   "closed": "2026-09-12",
+   "body": ""
+  },
+  {
+   "title": "Mapping script v1: customers",
+   "labels": [
+    "data-mapping"
+   ],
+   "milestone": "Dry-run 1",
+   "created": "2026-09-03",
+   "closed": "2026-09-14",
+   "body": ""
+  },
+  {
+   "title": "Cutover runbook skeleton",
+   "labels": [
+    "cutover-runbook"
+   ],
+   "milestone": "Dry-run 1",
+   "created": "2026-09-02",
+   "closed": "2026-09-09",
+   "body": ""
+  },
+  {
+   "title": "Freeze window procedure for legacy ERP",
+   "labels": [
+    "cutover-runbook"
+   ],
+   "milestone": "Dry-run 1",
+   "created": "2026-09-08",
+   "closed": "2026-09-16",
+   "body": ""
+  },
+  {
+   "title": "CRM \u2192 ERP account sync adapter",
+   "labels": [
+    "integration"
+   ],
+   "milestone": "Dry-run 1",
+   "created": "2026-09-04",
+   "closed": "2026-09-18",
+   "body": ""
+  },
+  {
+   "title": "Payroll file export format",
+   "labels": [
+    "integration"
+   ],
+   "milestone": "Dry-run 1",
+   "created": "2026-09-09",
+   "closed": "2026-09-17",
+   "body": ""
+  },
+  {
+   "title": "Read-only reporting views on target during migration",
+   "labels": [
+    "reporting"
+   ],
+   "milestone": "Dry-run 1",
+   "created": "2026-09-10",
+   "closed": "2026-09-19",
+   "body": ""
+  },
+  {
+   "title": "Service accounts and least-privilege roles for migration jobs",
+   "labels": [
+    "security"
+   ],
+   "milestone": "Dry-run 1",
+   "created": "2026-09-05",
+   "closed": "2026-09-15",
+   "body": ""
+  },
+  {
+   "title": "Rotate legacy integration secrets before dry-run",
+   "labels": [
+    "security"
+   ],
+   "milestone": "Dry-run 1",
+   "created": "2026-09-12",
+   "closed": "2026-09-18",
+   "body": ""
+  },
+  {
+   "title": "DR1: 310 vendor records fail mapping \u2014 missing tax IDs",
+   "labels": [
+    "data-mapping",
+    "dry-run-finding"
+   ],
+   "milestone": "Dry-run 2",
+   "created": "2026-09-19",
+   "closed": "2026-10-01",
+   "body": ""
+  },
+  {
+   "title": "DR1: duplicate customers across Region A and B",
+   "labels": [
+    "data-mapping",
+    "dry-run-finding"
+   ],
+   "milestone": "Dry-run 2",
+   "created": "2026-09-19",
+   "closed": "2026-10-03",
+   "body": ""
+  },
+  {
+   "title": "DR1: batch load exceeds 6h window",
+   "labels": [
+    "performance",
+    "dry-run-finding"
+   ],
+   "milestone": "Dry-run 2",
+   "created": "2026-09-19",
+   "closed": "2026-09-30",
+   "body": ""
+  },
+  {
+   "title": "DR1: runbook step 14 ambiguous (who confirms bank file?)",
+   "labels": [
+    "cutover-runbook",
+    "dry-run-finding"
+   ],
+   "milestone": "Dry-run 2",
+   "created": "2026-09-20",
+   "closed": "2026-09-24",
+   "body": ""
+  },
+  {
+   "title": "DR1: CRM sync retries not idempotent",
+   "labels": [
+    "integration",
+    "dry-run-finding"
+   ],
+   "milestone": "Dry-run 2",
+   "created": "2026-09-21",
+   "closed": "2026-10-02",
+   "body": ""
+  },
+  {
+   "title": "Parallelise vendor mapping job",
+   "labels": [
+    "performance"
+   ],
+   "milestone": "Dry-run 2",
+   "created": "2026-09-22",
+   "closed": "2026-10-06",
+   "body": ""
+  },
+  {
+   "title": "Add reconciliation report: legacy vs target counts",
+   "labels": [
+    "reporting"
+   ],
+   "milestone": "Dry-run 2",
+   "created": "2026-09-23",
+   "closed": "2026-10-07",
+   "body": ""
+  },
+  {
+   "title": "Mapping script v2: vendors (tax ID fallback)",
+   "labels": [
+    "data-mapping"
+   ],
+   "milestone": "Dry-run 2",
+   "created": "2026-09-25",
+   "closed": "2026-10-08",
+   "body": ""
+  },
+  {
+   "title": "Mapping script v2: customers (dedupe by registration no.)",
+   "labels": [
+    "data-mapping"
+   ],
+   "milestone": "Dry-run 2",
+   "created": "2026-09-26",
+   "closed": "2026-10-09",
+   "body": ""
+  },
+  {
+   "title": "Audit log for every migration write",
+   "labels": [
+    "security"
+   ],
+   "milestone": "Dry-run 2",
+   "created": "2026-09-24",
+   "closed": "2026-10-05",
+   "body": ""
+  },
+  {
+   "title": "DR2: 1,200 vendor records unmapped \u2014 Region B legacy codes",
+   "labels": [
+    "data-mapping",
+    "dry-run-finding"
+   ],
+   "milestone": "Dry-run 3",
+   "created": "2026-10-10",
+   "closed": null,
+   "body": "Region B uses a second vendor code scheme not present in the mapping table. Blocks cutover sign-off."
+  },
+  {
+   "title": "DR2: 85 customers with conflicting payment terms after dedupe",
+   "labels": [
+    "data-mapping",
+    "dry-run-finding"
+   ],
+   "milestone": "Dry-run 3",
+   "created": "2026-10-10",
+   "closed": null,
+   "body": ""
+  },
+  {
+   "title": "DR2: bank file rejected \u2014 field length",
+   "labels": [
+    "integration",
+    "dry-run-finding"
+   ],
+   "milestone": "Dry-run 3",
+   "created": "2026-10-10",
+   "closed": "2026-10-11",
+   "body": ""
+  },
+  {
+   "title": "DR2: reconciliation report off by 14 on GL accounts",
+   "labels": [
+    "reporting",
+    "dry-run-finding"
+   ],
+   "milestone": "Dry-run 3",
+   "created": "2026-10-10",
+   "closed": null,
+   "body": ""
+  },
+  {
+   "title": "DR2: load window now 4h10 \u2014 within limit",
+   "labels": [
+    "performance",
+    "dry-run-finding"
+   ],
+   "milestone": "Dry-run 3",
+   "created": "2026-10-10",
+   "closed": "2026-10-10",
+   "body": "Closing as verified."
+  },
+  {
+   "title": "Obtain Region B vendor code table from Vendor A master-data team",
+   "labels": [
+    "data-mapping"
+   ],
+   "milestone": "Dry-run 3",
+   "created": "2026-10-11",
+   "closed": null,
+   "body": "Workshop scheduled 24 Oct."
+  },
+  {
+   "title": "Mapping script v3: Region B code scheme",
+   "labels": [
+    "data-mapping"
+   ],
+   "milestone": "Dry-run 3",
+   "created": "2026-10-11",
+   "closed": null,
+   "body": ""
+  },
+  {
+   "title": "Decision: accept 3-week cutover slip (target 19 Dec)",
+   "labels": [
+    "cutover-runbook"
+   ],
+   "milestone": "Cutover",
+   "created": "2026-10-11",
+   "closed": "2026-10-11",
+   "body": "Steering committee informed. Forecast moved from 30 Nov to 19 Dec."
+  },
+  {
+   "title": "Re-baseline runbook timings after DR2",
+   "labels": [
+    "cutover-runbook"
+   ],
+   "milestone": "Dry-run 3",
+   "created": "2026-10-12",
+   "closed": null,
+   "body": ""
+  },
+  {
+   "title": "Shared services go-live dependency on cutover \u2014 confirm Jan date",
+   "labels": [
+    "cutover-runbook"
+   ],
+   "milestone": "Cutover",
+   "created": "2026-10-12",
+   "closed": null,
+   "body": ""
+  },
+  {
+   "title": "Payroll export: handle terminated employees in cutover month",
+   "labels": [
+    "integration"
+   ],
+   "milestone": "Dry-run 3",
+   "created": "2026-10-08",
+   "closed": "2026-10-09",
+   "body": ""
+  },
+  {
+   "title": "Month-end close rehearsal on target (Finance)",
+   "labels": [
+    "reporting"
+   ],
+   "milestone": "Dry-run 3",
+   "created": "2026-10-09",
+   "closed": null,
+   "body": ""
+  },
+  {
+   "title": "Pen-test migration endpoints before DR3",
+   "labels": [
+    "security"
+   ],
+   "milestone": "Dry-run 3",
+   "created": "2026-10-07",
+   "closed": null,
+   "body": ""
+  },
+  {
+   "title": "Remove temporary admin grants used in DR2",
+   "labels": [
+    "security"
+   ],
+   "milestone": "Dry-run 3",
+   "created": "2026-10-11",
+   "closed": "2026-10-11",
+   "body": ""
+  },
+  {
+   "title": "KPI pack: days-to-close source switches to target after cutover",
+   "labels": [
+    "reporting"
+   ],
+   "milestone": "Cutover",
+   "created": "2026-10-06",
+   "closed": null,
+   "body": ""
+  },
+  {
+   "title": "Archive legacy integration jobs plan",
+   "labels": [
+    "integration"
+   ],
+   "milestone": "Cutover",
+   "created": "2026-10-05",
+   "closed": null,
+   "body": ""
+  },
+  {
+   "title": "Rollback drill: restore legacy from freeze snapshot",
+   "labels": [
+    "cutover-runbook"
+   ],
+   "milestone": "Dry-run 3",
+   "created": "2026-10-03",
+   "closed": "2026-10-09",
+   "body": ""
+  },
+  {
+   "title": "Cutover communications checklist (People workstream)",
+   "labels": [
+    "cutover-runbook"
+   ],
+   "milestone": "Cutover",
+   "created": "2026-10-02",
+   "closed": "2026-10-08",
+   "body": ""
+  },
+  {
+   "title": "Post-cutover hypercare rota",
+   "labels": [
+    "cutover-runbook"
+   ],
+   "milestone": "Cutover",
+   "created": "2026-10-12",
+   "closed": null,
+   "body": ""
+  }
+ ]
+}
